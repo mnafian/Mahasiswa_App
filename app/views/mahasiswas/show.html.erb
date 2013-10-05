@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nim:</strong>
+  <%= @mahasiswa.nim %>
+</p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @mahasiswa.nama %>
+</p>
+
+<p>
+  <strong>Alamat:</strong>
+  <%= @mahasiswa.alamat %>
+</p>
+
+<p>
+  <strong>Jam absen:</strong>
+  <%= @mahasiswa.jam_absen %>
+</p>
+
+<%= link_to 'Edit', edit_mahasiswa_path(@mahasiswa) %> |
+<%= link_to 'Back', mahasiswas_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@mahasiswa) do |f| %>
+  <% if @mahasiswa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mahasiswa.errors.count, "error") %> prohibited this mahasiswa from being saved:</h2>
+
+      <ul>
+      <% @mahasiswa.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nim %><br>
+    <%= f.number_field :nim %>
+  </div>
+  <div class="field">
+    <%= f.label :nama %><br>
+    <%= f.text_field :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :alamat %><br>
+    <%= f.text_field :alamat %>
+  </div>
+  <div class="field">
+    <%= f.label :jam_absen %><br>
+    <%= f.text_field :jam_absen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nim: 1
+  nama: MyString
+  alamat: MyString
+  jam_absen: MyString
+
+two:
+  nim: 1
+  nama: MyString
+  alamat: MyString
+  jam_absen: MyString

@@ -1,0 +1,33 @@
+<h1>Daftar Mahasiswa dan Jam Absensi</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nim</th>
+      <th>Nama</th>
+      <th>Alamat</th>
+      <th>Jam absen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mahasiswas.each do |mahasiswa| %>
+      <tr>
+        <td><%= mahasiswa.nim %></td>
+        <td><%= mahasiswa.nama %></td>
+        <td><%= mahasiswa.alamat %></td>
+        <td><%= mahasiswa.jam_absen %></td>
+        <td><%= link_to 'Show', mahasiswa %></td>
+        <td><%= link_to 'Edit', edit_mahasiswa_path(mahasiswa) %></td>
+        <td><%= link_to 'Destroy', mahasiswa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mahasiswa', new_mahasiswa_path %>
